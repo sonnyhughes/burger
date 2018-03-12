@@ -14,7 +14,9 @@ router.get('/', function (req, res) {
 router.get('/burgers', function (req, res) {
     burger.selectAll(function (data) {
         //RENDER RESPONSE WITH HANDLEBARS
-        res.render('index', { burgers: data });
+        res.render('index', {
+            burgers: data
+        });
     });
 });
 
